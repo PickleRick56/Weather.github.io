@@ -1,0 +1,386 @@
+html,body {
+    height: 100%;
+/*    background-color: black;*/
+}
+
+ul {
+    list-style: none;
+    margin: 0 !important;
+}
+
+
+a,
+a:hover,
+a:active {
+    text-decoration: none!important;
+    outline: none !important;
+}
+
+button:hover,
+button:active,
+button:focus {
+    outline: none !important;
+    cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+footer {
+
+  flex: 0 0 auto;
+    font-size: 12px;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    height: 100px;
+    min-height: 307px;
+    background-color: rgb(192,59,29);
+    color: white;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+:root  {
+    --countName: 16;
+}
+.Karl {
+    position: relative;
+}
+
+.centered {
+    max-width: 1141px !important;
+    margin: 0 auto;
+}
+
+/*         HEADER*/
+
+header {
+    position: relative;
+    z-index: 1;
+    background: url(../img/layer-10.png) no-repeat center center red;
+    background-size: cover;
+
+}
+
+header::after {
+    content: "";
+    background: black 0 0 no-repeat;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+.header_titel {
+    max-width: 581px;
+    margin: 264px auto 50px;
+    color: #ffffff;
+    font-family: "Roboto Slab";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+
+.header_button {
+
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 13px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+    /* Убираем подчеркивание */
+    outline: none;
+    /* Убираем контур вокруг ссылки */
+    background-color: transparent;
+    /* Цвет фона */
+    padding: 17px 34px 16px 35px;
+    /* Отступ от текста до рамки */
+    border: 2px solid #fff;
+
+}
+
+.header_button:hover {
+    background-color: transparent;
+    color: #fff;
+
+}
+
+.header_button:active {
+    background-color: transparent;
+    color: #fff;
+}
+
+.h_button {
+    padding-bottom: 271px;
+}
+
+
+/*FIRST SECTION*/
+
+.first_sec {
+    padding-bottom: 100px;
+}
+
+.f_s_service {
+    padding-top: 30px;
+    color: #555555;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.line {
+    /* Style for "Shape 1 co" */
+    margin: 29px auto 28px;
+    width: 50px;
+    height: 2px;
+    background-color: #555555;
+}
+
+.f_s_service_p {
+    /* Style for "We offer i" */
+    color: #555555;
+    font-family: "Roboto Slab";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 70px;
+}
+
+
+.f_s_card_divImg {
+    /* Style for "Ellipse 1" */
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #dddddd;
+    border-radius: 50%;
+}
+
+.f_s_card_divImg img {
+    display: block;
+}
+
+.f_s_card_h {
+    text-align: center;
+    margin: 29px auto 24px;
+    max-width: 345px;
+    min-height: 11px;
+    color: #555555;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.f_s_card_p {
+    margin: 0 auto;
+    /* Style for "Lorem ipsu" */
+    text-align: center;
+   max-width: 345px;
+    min-height: 63px;
+    color: #555555;
+    font-family: "Roboto Slab";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+/*SECOND SECTION*/
+
+.second_section {
+    background-color: #f8f8f8;
+}
+
+.second_sec_p {
+    /* Style for "Lorem ipsu" */
+    margin-bottom: 71px;
+    min-height: 110px;
+    color: #555555;
+    font-family: "Roboto Slab";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.second_s_card_divImg {
+    /* Style for "Layer 15" */
+    margin: 0 auto;
+    width: 263px;
+    height: 250px;
+}
+
+.second_s_card_h {
+    /* Style for "Rubel Miah" */
+    margin: 20px auto 15px;
+    width: 90px;
+    height: 11px;
+    color: #555555;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.second_s_card_p {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    /* Style for "Lead WordP" */
+    width: 163px;
+    height: 14px;
+    color: #555555;
+    font-family: "Roboto Slab";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/*////////Fird Section*/
+
+.fird_s_cart{
+    padding:  20px 0 20px;
+}
+
+
+
+
+/*                             ///////////CART                      */
+
+
+
+#cart{
+    min-height: 180px;
+    background: url(../img/icon-cart.svg) no-repeat center center;
+
+    border: 3px dashed #0D3356;
+}
+
+
+
+.sixth-input-1 {
+    font-size: 14px;
+    height: 43px;
+    border: 1px solid black;
+    margin-bottom: 22px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 14px;
+    color: black;
+    opacity: 1;
+    text-transform: uppercase;
+}
+
+
+
+input:focus {
+    outline-color: darkgreen;
+}
+
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+input:valid:not(:placeholder-shown) {
+    border-color: lawngreen;
+}
+
+.sixth-textarea {
+    font-size: 14px;
+    height: 102px;
+    border: 1px solid black;
+    margin-bottom: 22px;
+}
+
+
+
+.sixth-textarea:focus {
+
+    outline-color: darkgreen;
+}
+
+
+.s_forma_our_info {
+    font-size: 12px;
+}
+
+.caption {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form_btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+    padding: 15px 35px;
+}
+
+
+.s_forma_adress,
+.s_forma_hotline,
+.s_forma_e-mail {
+    margin-bottom: 30px;
+}
+
+.s_f_forma {
+    margin-bottom: 10px;
+}
+
+
+/*//////////////weather_section*/
+
+#output{
+max-width: 500px;
+    margin: 0 auto;
+}
+
+#weather_wear_div_img{
+    height: 157px;
+    width: 100px;
+    background-color: gray;
+}
+
+#weather_icon{
+    
+    text-align: center;
+    height: 50px;
+    background: no-repeat center right blue;
+   
+    line-height: 50px;
+    
+}
+
+/* FOOTER*/
+
+.footer_line{
+    margin: 29px auto 28px;
+    width: 50px;
+    height: 2px;
+    background-color: white;
+}
+
+
+
