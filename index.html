@@ -193,7 +193,7 @@
                             </div>
 
                             <div class="fird_s_cart col-lg-3 col-md-4">
-                                <div class="s-cover d-flex  justify-content-center"><img class="align-self-end img-fluid" src="img/pro_stree2t.jpg" style="width: 100px;" alt=""></div>
+                                <div class="s-cover d-flex  justify-content-center"><img class="align-self-end img-fluid" src="img/pro_street.jpg" style="width: 100px;" alt=""></div>
                                 <h1 class="second-h1">Responsive</h1>
                                 <p class="second-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie purus a felis condimentum molestie. </p>
                                 <button class="fruit" data-fruit="banana">Banana</button>
@@ -303,7 +303,13 @@
 
                 </div>
             </div>
-
+ <label for="">
+        <select name="" id="selectCity">
+            <option value="Orenburg,ru" selected >Оренбург</option>
+            <option value="Tokyo,jp">Токио</option>
+        </select>
+        
+    </label>
 
         </div>
         <footer class="d-flex justify-content-center align-items-center" >
@@ -521,12 +527,18 @@
                 </div>
         </footer>
     </div>
-
+   
 
     <script>
-        var weather_img; // переменная для меган
+        
+        
+    var selectedValue = document.getElementById("selectCity");
+       selectedValue.addEventListener("change", reciveWeather);
+        
+       function reciveWeather(){
+            var weather_img; // переменная для меган
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Orenburg,ru&APPID=99645014e9e3a32f1552c2e9100fcd54', true);
+        xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q='+selectedValue.value+'&APPID=99645014e9e3a32f1552c2e9100fcd54', true);
         xhr.send();
 
         xhr.onreadystatechange = function() {
@@ -568,6 +580,12 @@
            
             weaweather_wear_img.src="img/weather" + weather_img + ".jpg";
         };
+       }
+
+        
+            window.onload = function () {
+            reciveWeather();
+}
 
     </script>
 
