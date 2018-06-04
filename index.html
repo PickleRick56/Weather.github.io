@@ -167,7 +167,7 @@
                     <div class="container-fluid text-center">
                         <div class="row d-flex  mg-b-3 justify-content-center">
                             <div class="fird_s_cart col-lg-3 col-md-4 ">
-                                <div class="s-cover d-flex    justify-content-center"><img class="align-self-end img-fluid" src="img/carbon.jpg" style="width: 100px;" alt=""></div>
+                                <div class="s-cover d-flex    justify-content-center"><img class="align-self-end img-fluid" src="img/apple.jpg" style="width: 100px;" alt=""></div>
                                 <h1 class="second-h1">Responsive</h1>
                                 <p class="second-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie purus a felis condimentum molestie. </p>
                                 <button class="fruit" data-fruit="apple">Apple</button>
@@ -175,7 +175,7 @@
 
                             <div class="fird_s_cart col-lg-3 col-md-4">
 
-                                <div class="s-cover d-flex  justify-content-center"><img class="align-self-end img-fluid" src="img/nicol2.jpg" style="width: 100px;" alt=""></div>
+                                <div class="s-cover d-flex  justify-content-center"><img class="align-self-end img-fluid" src="img/mango.jpg" style="width: 100px;" alt=""></div>
 
                                 <h1 class="second-h1">Responsive</h1>
                                 <p class="second-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie purus a felis condimentum molestie. </p>
@@ -186,14 +186,14 @@
                             <div class="w-100 d-xl-none d-lg-block"></div>
 
                             <div class="fird_s_cart col-lg-3 col-md-4">
-                                <div class="s-cover d-flex  justify-content-center"><img class="align-self-end img-fluid" src="img/mostWanted.jpg" style="width: 100px;" alt=""></div>
+                                <div class="s-cover d-flex  justify-content-center"><img class="align-self-end img-fluid" src="img/watermelon.jpg" style="width: 100px;" alt=""></div>
                                 <h1 class="second-h1">Responsive</h1>
                                 <p class="second-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie purus a felis condimentum molestie. </p>
                                 <button class="fruit" data-fruit="watermelon">Watermelon</button>
                             </div>
 
                             <div class="fird_s_cart col-lg-3 col-md-4">
-                                <div class="s-cover d-flex  justify-content-center"><img class="align-self-end img-fluid" src="img/pro_street.jpg" style="width: 100px;" alt=""></div>
+                                <div class="s-cover d-flex  justify-content-center"><img class="align-self-end img-fluid" src="img/banana.jpg" style="width: 100px;" alt=""></div>
                                 <h1 class="second-h1">Responsive</h1>
                                 <p class="second-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie purus a felis condimentum molestie. </p>
                                 <button class="fruit" data-fruit="banana">Banana</button>
@@ -287,29 +287,37 @@
 
 
             </div>
+            
+            
+            
+            
             <div class="centered">
-                <div id="weather_output" class="bg-danger d-flex justify-content-center">
-                    <div id="weather_wear_div_img">
-                        <img src="img/weather4.jpg" id="weaweather_wear_img" class="img-fluid" alt="weather cloth">
+                <div id="weather_output" class=" d-flex justify-content-center">
+                    <div id="weather_wear_div_img" class=" d-flex justify-content-center align-items-center">
+                        <img src="img/cloud.svg" id="weaweather_wear_img" class="img-fluid rounded " alt="weather cloth">
                     </div>
                     <div class="weather_div">
-                        <div id="weather_icon" > Погода</div>
+                        <div id="weather_icon" > Погода в
+                        
+                        <label for="">
+        <select name="" id="selectCity">
+            <option value="Orenburg,ru" selected >Оренбурге</option>
+            <option value="Tokyo,jp">Токио</option>
+        </select>
+        
+    </label>
+                        
+                        </div>
                         <div id="weather_temperature"></div>
                         <div id="weather_pressure"></div>
                         <div id="weather_humidity"></div>
-<div style="height: 15px; background-color: yellow; "></div>
+                        <div id="weather_speed"></div>
 
                     </div>
 
                 </div>
             </div>
- <label for="">
-        <select name="" id="selectCity">
-            <option value="Orenburg,ru" selected >Оренбург</option>
-            <option value="Tokyo,jp">Токио</option>
-        </select>
-        
-    </label>
+ 
 
         </div>
         <footer class="d-flex justify-content-center align-items-center" >
@@ -564,6 +572,7 @@
                 weather_pressure.innerHTML = " Давление: " + (myItems.main.pressure * 0.75) + " мм рт. ст.";
                 weather_humidity.innerHTML = "Влажность: " + Math.round(myItems.main.humidity) + "%";
                 weather_icon.style.backgroundImage = "url('https://openweathermap.org/img/w/" + myItems.weather[0].icon + ".png')";
+                weather_speed.innerHTML= "Скорость ветра "+myItems.wind.speed+ " м/с"
                
             }
             

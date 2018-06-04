@@ -51,17 +51,17 @@ var itemsCounter=document.getElementById(itemFruit);
                 if(Card.childElementCount%2===0){
                      
                     item.className = itemFruit + ' bg-warning  ';
-                item.style.height = 178 + "px";
+                
                 }else{
                      
                     item.className = itemFruit ;
-                item.style.height = 178 + "px";
+              
                    
                 }
 
 
 
-                var itemHtml = "  <div class='centered my-5 px-5 img-fluid  d-flex align-items-center justify-content-between'><img class=' img-fluid' style='width:100px' src='./img/" + imgId + "'>  <div>" + itemFruit + " </div> <div id='"+itemFruit+"'>"+card[name].count+"</div>     <button class='delete' onclick='deleteMe(this)'> delete </button></div> ";
+                var itemHtml = "  <div class='centered  img-fluid  d-flex align-items-center justify-content-between' style='height:178px'><img class=' img-fluid' style='width:100px' src='./img/" + imgId + "'>  <div>" + itemFruit + " </div> <div id='"+itemFruit+"'>"+card[name].count+"</div>     <button class='delete' onclick='deleteMe(this)'> delete </button></div> ";
                 Card.appendChild(item);
                 var x = Card.lastChild.innerHTML = itemHtml;
 

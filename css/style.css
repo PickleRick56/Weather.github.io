@@ -275,7 +275,12 @@ header::after {
 }
 
 
+                               /*SECTION FORMA*/
 
+
+.section_forma{
+    background-color: #f8f8f8;
+}
 .sixth-input-1 {
     font-size: 14px;
     height: 43px;
@@ -360,14 +365,15 @@ max-width: 500px;
 #weather_wear_div_img{
     height: 157px;
     width: 100px;
-    background-color: gray;
+    background-color: lightgray;
+    border-radius: 5px;
 }
 
 #weather_icon{
-    
+    padding-right: 49px;
     text-align: center;
     height: 50px;
-    background: no-repeat center right blue;
+    background: no-repeat center right white;
    
     line-height: 50px;
     
