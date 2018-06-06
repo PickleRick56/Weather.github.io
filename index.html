@@ -271,13 +271,13 @@
 
                             <form class="row justify-content-between d-md-flex-none d-flex">
 
-                                <input id="my" type="text" placeholder="Your name" required class="sixth-input-1 col mr-3">
-                                <input type="email" placeholder="Your E-mail" required class="sixth-input-1 col">
+                                <input id="name" type="text" placeholder="Your name" required class="sixth-input-1 col mr-3">
+                                <input type="email" placeholder="Your E-mail"  class="sixth-input-1 col">
                                 <div class="w-100  d-lg-block"></div>
                                 <input type="text" placeholder="Your subject" class="sixth-input-1 col mr-3">
-                                <input type="password" placeholder="password" required class="sixth-input-1 col ">
-                                <textarea class="sixth-textarea col-12" required placeholder="Your message" name="comment"></textarea>
-                                <button type="submit  " class="form_btn  mr-auto col-md-3 col-12 mb-5">Send message</button>
+                                <input type="password" placeholder="password"  id="password" class="sixth-input-1 col ">
+                                <textarea class="sixth-textarea col-12"  placeholder="Your message" name="comment"></textarea>
+                                <button type="button" id="formButton" class="form_btn  mr-auto col-md-3 col-12 mb-5">Send message</button>
                             </form>
 
                         </div>
@@ -318,6 +318,21 @@
                 </div>
             </div>
  
+        
+        
+        
+        <div id="windows" style="display: none">
+   <div class="overlay"></div>
+      <div class="visible">
+        <h2>Access</h2>
+          <div id="windows_content" class="content">
+          
+          </div>
+        <button id="windows_button" type="button" onClick="getElementById('windows').style.display='none';">Close</button>
+    </div>
+</div>
+        
+        
 
         </div>
         <footer class="d-flex justify-content-center align-items-center" >
@@ -538,7 +553,34 @@
    
 
     <script>
+        var logo=document.getElementById("name");
+        var pas=document.getElementById("password");
+        var accessBase = {user1:{name:"niga",
+                                password:"niga"},
+                         user2:{name:"admin",
+                               password:123}
+                        };
         
+        
+        formButton.addEventListener('click', pushFunction);
+        
+        function pushFunction(){
+       console.log(logo.value);
+            for(var key in accessBase){
+               if(accessBase[key].name=== logo.value){
+                  if(accessBase[key].password== pas.value){
+                      windows_content.innerHTML=logo.value;
+                     windows.removeAttribute('style');
+                     }
+               }
+            }
+        }
+                
+                
+                
+                
+                
+                
         
     var selectedValue = document.getElementById("selectCity");
        selectedValue.addEventListener("change", reciveWeather);
