@@ -372,10 +372,10 @@ max-width: 500px;
 #weather_icon{
     padding-right: 49px;
     text-align: center;
-    height: 50px;
+    
     background: no-repeat center right white;
    
-    line-height: 50px;
+    
     
 }
 

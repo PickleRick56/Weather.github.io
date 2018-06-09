@@ -1,4 +1,5 @@
-   var name;
+     
+     var name;
         var inputs = document.getElementsByClassName("fruit");
         var card = {
             apple: {
@@ -40,7 +41,7 @@
 var itemsCounter=document.getElementById(itemFruit);
             
             if (card[name].count == 0) {
-                alert('yes');
+                
                 card[name].count += 1;
                 var previusEl = e.target.parentNode.firstElementChild.firstElementChild.src;
                 var Card = document.getElementById("cart");
@@ -48,25 +49,15 @@ var itemsCounter=document.getElementById(itemFruit);
                 var itemName = imgId.substr(0, imgId.lastIndexOf("."));
 
                 var item = document.createElement("div");
-                if(Card.childElementCount%2===0){
-                     
-                    item.className = itemFruit + ' bg-warning  ';
-                
-                }else{
-                     
-                    item.className = itemFruit ;
-              
-                   
-                }
-
-
-
+                item.className = itemFruit ;
+               
                 var itemHtml = "  <div class='centered  img-fluid  d-flex align-items-center justify-content-between' style='height:178px'><img class=' img-fluid' style='width:100px' src='./img/" + imgId + "'>  <div>" + itemFruit + " </div> <div id='"+itemFruit+"'>"+card[name].count+"</div>     <button class='delete' onclick='deleteMe(this)'> delete </button></div> ";
                 Card.appendChild(item);
                 var x = Card.lastChild.innerHTML = itemHtml;
+                changeColor();
 
             } else {
-                alert("no");
+                
                 card[name].count += 1;
                
                itemsCounter.innerHTML=card[name].count;
@@ -76,16 +67,42 @@ var itemsCounter=document.getElementById(itemFruit);
             }
         }
 
-       
+       function changeColor(){
+        
+           if(cart.children.length > 0 ){
+               for(var i=0; i<cart.children.length; i++){
+                   cart.children[i].classList.remove("bg-warning");
+               }
+               
+               for(var j=0; j<cart.children.length; j++){
+                   
+                   if(j%2===0){
+                       console.log(cart.children[j]);
+                      cart.children[j].classList.add("bg-warning"); 
+                   }
+                   
+               }
+           }
+           
+           
+       }
 
+        
+        
+        
+        
         function deleteMe(thatB) {
           var goodName = thatB.parentNode.parentNode.classList.item(0);
             
             var thatButton = thatB.parentNode.parentNode.parentNode.removeChild(thatB.parentNode.parentNode);
           card[goodName].count=0;
            
+            changeColor();
+            
+            
             if(cart.childElementCount==0){
                 cart.style.backgroundImage="url(img/icon-cart.svg)";
             }
                 
         }
+    
