@@ -270,7 +270,6 @@ header::after {
 #cart{
     min-height: 180px;
     background: url(../img/icon-cart.svg) no-repeat center center;
-
     border: 3px dashed #0D3356;
 }
 
@@ -363,7 +362,6 @@ max-width: 500px;
 }
 
 #weather_wear_div_img{
-    height: 157px;
     width: 100px;
     background-color: lightgray;
     border-radius: 5px;
