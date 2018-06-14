@@ -51,7 +51,7 @@ var itemsCounter=document.getElementById(itemFruit);
                 var item = document.createElement("div");
                 item.className = itemFruit ;
                
-                var itemHtml = "  <div class='centered  img-fluid  d-flex align-items-center justify-content-between' style='height:178px'><img class=' img-fluid' style='width:100px' src='./img/" + imgId + "'>  <div>" + itemFruit + " </div> <div id='"+itemFruit+"'>"+card[name].count+"</div>     <button class='delete' onclick='deleteMe(this)'> delete </button></div> ";
+                var itemHtml = "  <div class='centered  img-fluid  d-flex align-items-center justify-content-between' style='height:178px'><img class=' img-fluid ml-1' style='width:100px' src='./img/" + imgId + "'>  <div>" + itemFruit + " </div> <div id='"+itemFruit+"'>"+card[name].count+"</div>     <button class='delete mr-1' onclick='deleteMe(this)'> delete </button></div> ";
                 Card.appendChild(item);
                 var x = Card.lastChild.innerHTML = itemHtml;
                 changeColor();
