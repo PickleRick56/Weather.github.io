@@ -1,25 +1,25 @@
      
-     var name;
+        var name;
         var inputs = document.getElementsByClassName("fruit");
         var card = {
             apple: {
-                imgAdress: "carbon.jpg",
-                imgName: "carbon",
+                imgAdress: "apple.jpg",
+                imgName: "apple",
                 count: 0
             },
             mango: {
-                imgAdress: "carbon.jpg",
-                imgName: "carbon",
+                imgAdress: "banana.jpg",
+                imgName: "banana",
                 count: 0
             },
             watermelon: {
-                imgAdress: "carbon.jpg",
-                imgName: "carbon",
+                imgAdress: "watermelon.jpg",
+                imgName: "watermelon",
                 count: 0
             },
             banana: {
-                imgAdress: "carbon.jpg",
-                imgName: "carbon",
+                imgAdress: "mango.jpg",
+                imgName: "mango",
                 count: 0
             }
         }
@@ -38,13 +38,12 @@
             var itemFruit = e.target.dataset.fruit;
             var fruitCounter;
             name = itemFruit;
-var itemsCounter=document.getElementById(itemFruit);
+           var itemsCounter=document.getElementById(itemFruit);
             
             if (card[name].count == 0) {
                 
                 card[name].count += 1;
                 var previusEl = e.target.parentNode.firstElementChild.firstElementChild.src;
-                var Card = document.getElementById("cart");
                 var imgId = previusEl.substr(previusEl.lastIndexOf("/") + 1, previusEl.length);
                 var itemName = imgId.substr(0, imgId.lastIndexOf("."));
 
@@ -52,8 +51,8 @@ var itemsCounter=document.getElementById(itemFruit);
                 item.className = itemFruit ;
                
                 var itemHtml = "  <div class='centered  img-fluid  d-flex align-items-center justify-content-between' style='height:178px'><img class=' img-fluid ml-1' style='width:100px' src='./img/" + imgId + "'>  <div>" + itemFruit + " </div> <div id='"+itemFruit+"'>"+card[name].count+"</div>     <button class='delete mr-1' onclick='deleteMe(this)'> delete </button></div> ";
-                Card.appendChild(item);
-                var x = Card.lastChild.innerHTML = itemHtml;
+                cart.appendChild(item);
+                var x = cart.lastChild.innerHTML = itemHtml;
                 changeColor();
 
             } else {

@@ -12,11 +12,11 @@
         function pushFunction(){
        console.log(logo.value);
             for(var key in accessBase){
-               if(accessBase[key].name=== logo.value){
-                  if(accessBase[key].password== pas.value){
-                      windows_content.innerHTML=logo.value;
+               if(accessBase[key].name=== logo.value && accessBase[key].password== pas.value){
+                   
+                    windows_content.innerHTML=logo.value;
                      windows.removeAttribute('style');
-                     }
+                 
                }
             }
         }
