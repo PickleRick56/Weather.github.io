@@ -366,15 +366,18 @@ max-width: 500px;
     background-color: lightgray;
     border-radius: 5px;
 }
-
+#weaweather_wear_img{
+/*    for ie 11 which dont know img-fluid class*/
+    width: 100px; 
+    height: 200px;
+    
+}
 #weather_icon{
     padding-right: 49px;
     text-align: center;
     
     background: no-repeat center right white;
-   
-    
-    
+ 
 }
 
 /* FOOTER*/

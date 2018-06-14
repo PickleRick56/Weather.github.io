@@ -6,8 +6,8 @@
                                password:123}
                         };
         
-        
-        formButton.addEventListener('click', pushFunction);
+        var weatherButton= document.getElementById("formButton");
+        weatherButton.addEventListener('click', pushFunction);
         
         function pushFunction(){
        console.log(logo.value);
